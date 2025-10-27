@@ -6,15 +6,16 @@
 Нам повезло, что `git status` подсказывает и это тоже.
 
 В выводе команды из последнего примера список изменений выглядит примерно так:
-```
+```bash
 Changes not staged for commit:
     (use "git add <file>..." to update what will be committed)
     (use "git checkout -- <file>..." to discard changes in working directory)
-```
+
     modified:   CONTRIBUTING.md
+```
 Здесь явно сказано как отменить существующие изменения. 
 Давайте так и сделаем:
-```
+```bash
 $ git checkout -- CONTRIBUTING.md
 $ git status
 On branch master
@@ -27,7 +28,7 @@ Changes to be committed:
 Как видите, откат изменений выполнен.
 
 >**Важно**
-
+>
 >Важно понимать, что `git checkout --- <file>` – опасная команда. Все локальные изменения в файле пропадут. 
 >Git просто заменит его версией из последнего коммита. 
 >Ни в коем случае не используйте эту команду, если вы не уверены, что изменения в файле вам не нужны.
